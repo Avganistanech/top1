@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Песня Мармока</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        header {
+            padding: 20px;
+            background-color: #4CAF50;
+            color: white;
+        }
+        h1 {
+            margin: 0;
+        }
+        .lyrics {
+            background-color: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        .play-button {
+            padding: 20px 40px;
+            font-size: 24px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .play-button:hover {
+            background-color: #45a049;
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Песня Мармока</h1>
+        <h2>Название песни: "Пример песни"</h2>
+    </header>
+    <div class="lyrics">
+        <h3>Marmok 1:</h3>
+        <
+        <!-- Аудиоплеер -->
+        <audio id="audio" src="Marmok.mp3" type="audio/mpeg"></audio>
+        
+        <!-- Большая кнопка -->
+        <button class="play-button" id="playButton">Воспроизвести</button>
+    </div>
+    <footer>
+        <p>&copy; 2023 Ваше имя. Все права защищены.</p>
+    </footer>
+
+    <script>
+        const audio = document.getElementById('audio');
+        const playButton = document.getElementById('playButton');
+
+        playButton.addEventListener('click', function() {
+            if (audio.paused) {
+                audio.play();
+                playButton.textContent = 'Пауза';
+            } else {
+                audio.pause();
+                playButton.textContent = 'Воспроизвести';
+            }
+        });
+    </script>
+</body>
+</html>
